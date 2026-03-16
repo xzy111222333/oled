@@ -13,7 +13,12 @@ struct DisplayTuningEngine {
 
         if profile.pwmProtectionEnabled && visualBrightness < safetyFloor {
             hardwareBrightness = safetyFloor
-            brightnessDrivenWhitePoint = remap(visualBrightness, from: 0...safetyFloor, to: 96...0)
+            brightnessDrivenWhitePoint = remap(
+                visualBrightness,
+                from: 0...safetyFloor,
+                targetStart: 96,
+                targetEnd: 0
+            )
         } else {
             hardwareBrightness = visualBrightness
             brightnessDrivenWhitePoint = 0
@@ -80,10 +85,15 @@ struct DisplayTuningEngine {
         return "\(phase.label) · \(profile.mode.title)模式 · 硬件亮度 \(Int(hardwareBrightness))% · 白点压制 \(Int(whitePoint))%"
     }
 
-    private func remap(_ value: Double, from: ClosedRange<Double>, to: ClosedRange<Double>) -> Double {
-        guard from.lowerBound != from.upperBound else { return to.lowerBound }
+    private func remap(
+        _ value: Double,
+        from: ClosedRange<Double>,
+        targetStart: Double,
+        targetEnd: Double
+    ) -> Double {
+        guard from.lowerBound != from.upperBound else { return targetStart }
         let normalized = (value - from.lowerBound) / (from.upperBound - from.lowerBound)
-        return to.lowerBound + (to.upperBound - to.lowerBound) * normalized
+        return targetStart + (targetEnd - targetStart) * normalized
     }
 
     private func computeRiskLevel(

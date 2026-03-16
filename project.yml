@@ -1,4 +1,7 @@
 name: OLEDGuard
+configs:
+  Debug: debug
+  Release: release
 options:
   minimumXcodeGenVersion: 2.39.0
   deploymentTarget:
@@ -11,7 +14,30 @@ settings:
     DEVELOPMENT_TEAM: ""
     CODE_SIGN_STYLE: Automatic
     GENERATE_INFOPLIST_FILE: NO
+    ALWAYS_SEARCH_USER_PATHS: NO
+    ENABLE_TESTABILITY: YES
+schemes:
+  OLEDGuard:
+    build:
+      targets:
+        OLEDGuard: all
+    test:
+      gatherCoverageData: false
+      targets:
+        - OLEDGuardTests
 targets:
+  OLEDGuardCore:
+    type: framework
+    platform: iOS
+    sources:
+      - path: Shared/Sources/Core
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.example.OLEDGuard.core
+        PRODUCT_NAME: OLEDGuardCore
+        SKIP_INSTALL: YES
+        GENERATE_INFOPLIST_FILE: YES
+
   OLEDGuard:
     type: application
     platform: iOS
@@ -58,12 +84,12 @@ targets:
   OLEDGuardTests:
     type: bundle.unit-test
     platform: iOS
-    hostApplication: OLEDGuard
     sources:
       - path: OLEDGuardTests/Sources
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.example.OLEDGuard.tests
         PRODUCT_NAME: OLEDGuardTests
+        GENERATE_INFOPLIST_FILE: YES
     dependencies:
-      - target: OLEDGuard
+      - target: OLEDGuardCore

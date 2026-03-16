@@ -46,10 +46,10 @@ enum CircadianPhase: String, Codable, Sendable {
     static func resolve(date: Date, calendar: Calendar = .current) -> CircadianPhase {
         let hour = calendar.component(.hour, from: date)
         switch hour {
-        case 7..<18: .daylight
-        case 18..<22: .evening
-        case 22..<24: .night
-        default: .sleep
+        case 7..<18: return CircadianPhase.daylight
+        case 18..<22: return CircadianPhase.evening
+        case 22..<24: return CircadianPhase.night
+        default: return CircadianPhase.sleep
         }
     }
 }
@@ -149,6 +149,229 @@ struct AutomationRule: Codable, Hashable, Identifiable, Sendable {
     }
 }
 
+enum AutomationStarterPack: String, CaseIterable, Identifiable, Sendable {
+    case balanced
+    case nightOwl
+    case manual
+
+    var id: String { rawValue }
+
+    var title: String {
+        switch self {
+        case .balanced: "标准三段"
+        case .nightOwl: "重度夜用"
+        case .manual: "纯手动"
+        }
+    }
+
+    var summary: String {
+        switch self {
+        case .balanced: "傍晚柔和、夜间阅读、早晨恢复，适合大多数人。"
+        case .nightOwl: "偏向晚睡人群，夜里更狠地压白场和蓝白刺激。"
+        case .manual: "关闭 App 内自动化，只保留手动调节和一键恢复。"
+        }
+    }
+
+    func rules() -> [AutomationRule] {
+        switch self {
+        case .balanced:
+            return [
+                AutomationRule(
+                    title: "傍晚柔和",
+                    isEnabled: true,
+                    hour: 19,
+                    minute: 0,
+                    profile: DisplayProfile(
+                        mode: .skin,
+                        filterIntensity: 34,
+                        visualBrightness: 52,
+                        brightnessStrategy: .circadian,
+                        pwmProtectionEnabled: true,
+                        autoBrightnessEnabled: true,
+                        circadianFilterEnabled: true,
+                        autoSleepAssistEnabled: false
+                    )
+                ),
+                AutomationRule(
+                    title: "夜间阅读",
+                    isEnabled: true,
+                    hour: 22,
+                    minute: 30,
+                    profile: DisplayProfile(
+                        mode: .amber,
+                        filterIntensity: 62,
+                        visualBrightness: 28,
+                        brightnessStrategy: .manual,
+                        pwmProtectionEnabled: true,
+                        autoBrightnessEnabled: false,
+                        circadianFilterEnabled: true,
+                        autoSleepAssistEnabled: true
+                    )
+                ),
+                AutomationRule(
+                    title: "早晨恢复",
+                    isEnabled: true,
+                    hour: 7,
+                    minute: 0,
+                    profile: .restored
+                )
+            ]
+        case .nightOwl:
+            return [
+                AutomationRule(
+                    title: "晚间过渡",
+                    isEnabled: true,
+                    hour: 20,
+                    minute: 30,
+                    profile: DisplayProfile(
+                        mode: .skin,
+                        filterIntensity: 42,
+                        visualBrightness: 46,
+                        brightnessStrategy: .circadian,
+                        pwmProtectionEnabled: true,
+                        autoBrightnessEnabled: true,
+                        circadianFilterEnabled: true,
+                        autoSleepAssistEnabled: false
+                    )
+                ),
+                AutomationRule(
+                    title: "深夜影院",
+                    isEnabled: true,
+                    hour: 23,
+                    minute: 30,
+                    profile: DisplayProfile(
+                        mode: .black,
+                        filterIntensity: 78,
+                        visualBrightness: 22,
+                        brightnessStrategy: .manual,
+                        pwmProtectionEnabled: true,
+                        autoBrightnessEnabled: false,
+                        circadianFilterEnabled: false,
+                        autoSleepAssistEnabled: true
+                    )
+                ),
+                AutomationRule(
+                    title: "起床恢复",
+                    isEnabled: true,
+                    hour: 8,
+                    minute: 30,
+                    profile: .restored
+                )
+            ]
+        case .manual:
+            return [
+                AutomationRule(
+                    title: "傍晚柔和",
+                    isEnabled: false,
+                    hour: 19,
+                    minute: 0,
+                    profile: DisplayProfile(
+                        mode: .skin,
+                        filterIntensity: 34,
+                        visualBrightness: 52,
+                        brightnessStrategy: .circadian,
+                        pwmProtectionEnabled: true,
+                        autoBrightnessEnabled: true,
+                        circadianFilterEnabled: true,
+                        autoSleepAssistEnabled: false
+                    )
+                ),
+                AutomationRule(
+                    title: "夜间阅读",
+                    isEnabled: false,
+                    hour: 22,
+                    minute: 30,
+                    profile: DisplayProfile(
+                        mode: .amber,
+                        filterIntensity: 62,
+                        visualBrightness: 28,
+                        brightnessStrategy: .manual,
+                        pwmProtectionEnabled: true,
+                        autoBrightnessEnabled: false,
+                        circadianFilterEnabled: true,
+                        autoSleepAssistEnabled: true
+                    )
+                ),
+                AutomationRule(
+                    title: "早晨恢复",
+                    isEnabled: false,
+                    hour: 7,
+                    minute: 0,
+                    profile: .restored
+                )
+            ]
+        }
+    }
+}
+
+enum CalibrationQuickAction: String, CaseIterable, Identifiable, Sendable {
+    case reduceGlare
+    case strongerProtection
+    case reduceColorCast
+    case extremeNight
+
+    var id: String { rawValue }
+
+    var title: String {
+        switch self {
+        case .reduceGlare: "还是刺眼"
+        case .strongerProtection: "继续护眼"
+        case .reduceColorCast: "颜色太重"
+        case .extremeNight: "极暗舒缓"
+        }
+    }
+
+    var summary: String {
+        switch self {
+        case .reduceGlare: "提高过滤度，轻压视觉亮度，让白场别那么冲。"
+        case .strongerProtection: "把当前方案往夜间舒适区再推一步。"
+        case .reduceColorCast: "保留护眼但减少偏色，适合觉得太黄太红时。"
+        case .extremeNight: "快速切到深夜可用的低刺激状态。"
+        }
+    }
+
+    func applying(to profile: DisplayProfile, phase: CircadianPhase) -> DisplayProfile {
+        var adjusted = profile
+
+        switch self {
+        case .reduceGlare:
+            adjusted.filterIntensity = min(profile.filterIntensity + 10, 100)
+            adjusted.visualBrightness = max(profile.visualBrightness - 8, 16)
+            adjusted.pwmProtectionEnabled = true
+        case .strongerProtection:
+            adjusted.filterIntensity = min(profile.filterIntensity + 16, 100)
+            adjusted.visualBrightness = max(profile.visualBrightness - 6, 18)
+            adjusted.pwmProtectionEnabled = true
+            adjusted.autoSleepAssistEnabled = phase == .night || phase == .sleep
+            if phase == .night && profile.mode == .skin {
+                adjusted.mode = .amber
+            }
+            if phase == .sleep && profile.mode != .red && profile.mode != .black {
+                adjusted.mode = .red
+            }
+        case .reduceColorCast:
+            adjusted.filterIntensity = max(profile.filterIntensity - 12, 0)
+            adjusted.visualBrightness = min(profile.visualBrightness + 6, 70)
+            adjusted.autoBrightnessEnabled = phase == .daylight || phase == .evening
+            adjusted.brightnessStrategy = adjusted.autoBrightnessEnabled ? .circadian : profile.brightnessStrategy
+            if profile.mode == .red || profile.mode == .green || profile.mode == .black {
+                adjusted.mode = phase == .sleep ? .amber : .skin
+            }
+        case .extremeNight:
+            adjusted.mode = phase == .sleep ? .red : .black
+            adjusted.filterIntensity = max(profile.filterIntensity, 76)
+            adjusted.visualBrightness = min(profile.visualBrightness, 22)
+            adjusted.pwmProtectionEnabled = true
+            adjusted.autoBrightnessEnabled = false
+            adjusted.brightnessStrategy = .manual
+            adjusted.circadianFilterEnabled = true
+            adjusted.autoSleepAssistEnabled = true
+        }
+
+        return adjusted
+    }
+}
+
 struct AppState: Codable, Sendable {
     var activeProfile: DisplayProfile
     var lastComputation: DisplayComputation
@@ -163,56 +386,7 @@ struct AppState: Codable, Sendable {
     static let `default` = AppState(
         activeProfile: .default,
         lastComputation: .neutral,
-        automationRules: [
-            AutomationRule(
-                title: "傍晚柔和",
-                isEnabled: true,
-                hour: 19,
-                minute: 0,
-                profile: DisplayProfile(
-                    mode: .skin,
-                    filterIntensity: 34,
-                    visualBrightness: 52,
-                    brightnessStrategy: .circadian,
-                    pwmProtectionEnabled: true,
-                    autoBrightnessEnabled: true,
-                    circadianFilterEnabled: true,
-                    autoSleepAssistEnabled: false
-                )
-            ),
-            AutomationRule(
-                title: "夜间阅读",
-                isEnabled: true,
-                hour: 22,
-                minute: 30,
-                profile: DisplayProfile(
-                    mode: .amber,
-                    filterIntensity: 62,
-                    visualBrightness: 28,
-                    brightnessStrategy: .manual,
-                    pwmProtectionEnabled: true,
-                    autoBrightnessEnabled: false,
-                    circadianFilterEnabled: true,
-                    autoSleepAssistEnabled: true
-                )
-            ),
-            AutomationRule(
-                title: "深夜助眠",
-                isEnabled: true,
-                hour: 0,
-                minute: 0,
-                profile: DisplayProfile(
-                    mode: .red,
-                    filterIntensity: 84,
-                    visualBrightness: 18,
-                    brightnessStrategy: .manual,
-                    pwmProtectionEnabled: true,
-                    autoBrightnessEnabled: false,
-                    circadianFilterEnabled: true,
-                    autoSleepAssistEnabled: true
-                )
-            )
-        ],
+        automationRules: AutomationStarterPack.balanced.rules(),
         isProtectionEnabled: true,
         hasCompletedOnboarding: false,
         baselineBrightness: nil,

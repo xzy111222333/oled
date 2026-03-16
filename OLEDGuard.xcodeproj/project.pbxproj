@@ -1,0 +1,572 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		14098F3E9A41B69F25B3B203 /* SystemCapabilityBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A683046EEE433B977DB070 /* SystemCapabilityBridge.swift */; };
+		160490803A307F19B71EEFCB /* DisplayEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177C08DB7C39E6E0F47A969D /* DisplayEngine.swift */; };
+		3326F090EA660EB068EDA031 /* DisplayEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177C08DB7C39E6E0F47A969D /* DisplayEngine.swift */; };
+		35D47D292D0574FCA741F0D4 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2852F72E384B0997441F95CF /* AppState.swift */; };
+		4CB6AF807B8943004EE38830 /* SharedStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607C816F072BF7788CFEEF05 /* SharedStore.swift */; };
+		5528B3276BF09BE6CBE802DA /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2852F72E384B0997441F95CF /* AppState.swift */; };
+		55E2B216550A4979EB353BC4 /* AutomationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CEE0A7DF5A1F32319A77A20 /* AutomationView.swift */; };
+		5B400B4CD344E37BD5A07921 /* SystemCapabilityBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A683046EEE433B977DB070 /* SystemCapabilityBridge.swift */; };
+		5F5784082C05A72E0D6AB3CB /* SharedStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607C816F072BF7788CFEEF05 /* SharedStore.swift */; };
+		68E018EAE5B25A14CDD3E563 /* SharedComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB586815B6B7912B97DEC8CC /* SharedComponents.swift */; };
+		707250F138D52A3F64F6F95E /* SystemDisplayController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D201094B7BC697EC56A092EE /* SystemDisplayController.swift */; };
+		7D6B169BAA9E03FB85284613 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF76FD447F03A4613319DC44 /* ContentView.swift */; };
+		8004B744B9863B0D4099997A /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 685E34324C7A338F2C458440 /* AppModel.swift */; };
+		89F6604F9A8EBC6DD7B9B8D8 /* SystemCapabilityBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A683046EEE433B977DB070 /* SystemCapabilityBridge.swift */; };
+		9ECF57221A69BE6ADCF58EFD /* DisplayMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1695B9DDDA04CB876E8A9F /* DisplayMode.swift */; };
+		B34E02B4D35D542475330A02 /* OLEDGuardCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DA6BD1B3BEF45C4941F470F /* OLEDGuardCore.framework */; };
+		B3CBE76825FBDABFD609FBF2 /* DisplayMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1695B9DDDA04CB876E8A9F /* DisplayMode.swift */; };
+		B44446610AA180DCD1CC9E47 /* SharedStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607C816F072BF7788CFEEF05 /* SharedStore.swift */; };
+		C2EFEB1061DEB2E162608D36 /* DisplayIntents.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8F87554DFC5D45CE474808 /* DisplayIntents.swift */; };
+		C7B2A0AB544C6110BA698DA8 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B5E6C5A84371B220302669 /* SettingsView.swift */; };
+		D5F0EC756ABA4996AB62B8FA /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A956408EDFE4A2EFEF2B5DAE /* OnboardingView.swift */; };
+		D691C55A15073754C2EFCBE9 /* DisplayMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1695B9DDDA04CB876E8A9F /* DisplayMode.swift */; };
+		D86ADE755F8A33A9CDEEC30F /* OLEDGuardApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDA146C0C1C1873865C46E7 /* OLEDGuardApp.swift */; };
+		D89670CDD830BA9F5973F251 /* DisplayEngineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF1E0D1CBD472FF42C54D18 /* DisplayEngineTests.swift */; };
+		DE6441F9CC0A63974B1942D2 /* DisplayIntents.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8F87554DFC5D45CE474808 /* DisplayIntents.swift */; };
+		DF8CA4E0F77C2D04DEB039A7 /* OLEDGuardWidgetsBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E21E84A742A920B9C7A83E /* OLEDGuardWidgetsBundle.swift */; };
+		E3AFCFC3F67E41C014538EAF /* OLEDGuardWidgetsExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 723699484217E70E20366BC5 /* OLEDGuardWidgetsExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		E46C098EF953D8E736DAE83A /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2852F72E384B0997441F95CF /* AppState.swift */; };
+		E7A9B8B4C841A9CD36E85D8D /* OLEDGuardCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0DA6BD1B3BEF45C4941F470F /* OLEDGuardCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FEAF11987628376F83F6B893 /* DisplayEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177C08DB7C39E6E0F47A969D /* DisplayEngine.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4955D9711E6A6B2F2A3B59B8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 543DD10C8CC2E30CAA6008F2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ED4AEC801EE730FCB46FC061;
+			remoteInfo = OLEDGuardWidgetsExtension;
+		};
+		9A1D7342D885468EFAE496D3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 543DD10C8CC2E30CAA6008F2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8E69A12162852EF8020D17FB;
+			remoteInfo = OLEDGuardCore;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		69E275467B80F29943891B8B /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				E3AFCFC3F67E41C014538EAF /* OLEDGuardWidgetsExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A5B2D55F558CF16A679FC4ED /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				E7A9B8B4C841A9CD36E85D8D /* OLEDGuardCore.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		04E21E84A742A920B9C7A83E /* OLEDGuardWidgetsBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OLEDGuardWidgetsBundle.swift; sourceTree = "<group>"; };
+		0DA6BD1B3BEF45C4941F470F /* OLEDGuardCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OLEDGuardCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		177C08DB7C39E6E0F47A969D /* DisplayEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayEngine.swift; sourceTree = "<group>"; };
+		2852F72E384B0997441F95CF /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		4BDA146C0C1C1873865C46E7 /* OLEDGuardApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OLEDGuardApp.swift; sourceTree = "<group>"; };
+		54BECE6222DD8B7BF0F5D21B /* OLEDGuardTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = OLEDGuardTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		607C816F072BF7788CFEEF05 /* SharedStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedStore.swift; sourceTree = "<group>"; };
+		685E34324C7A338F2C458440 /* AppModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModel.swift; sourceTree = "<group>"; };
+		723699484217E70E20366BC5 /* OLEDGuardWidgetsExtension.appex */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = "wrapper.app-extension"; path = OLEDGuardWidgetsExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A1695B9DDDA04CB876E8A9F /* DisplayMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayMode.swift; sourceTree = "<group>"; };
+		8EF1E0D1CBD472FF42C54D18 /* DisplayEngineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayEngineTests.swift; sourceTree = "<group>"; };
+		9CEE0A7DF5A1F32319A77A20 /* AutomationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutomationView.swift; sourceTree = "<group>"; };
+		A956408EDFE4A2EFEF2B5DAE /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		AA8F87554DFC5D45CE474808 /* DisplayIntents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayIntents.swift; sourceTree = "<group>"; };
+		D201094B7BC697EC56A092EE /* SystemDisplayController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemDisplayController.swift; sourceTree = "<group>"; };
+		DB586815B6B7912B97DEC8CC /* SharedComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedComponents.swift; sourceTree = "<group>"; };
+		E8B5E6C5A84371B220302669 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		E8F2C247525D86F5AAEB21C6 /* OLEDGuard.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = OLEDGuard.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF76FD447F03A4613319DC44 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		F2A683046EEE433B977DB070 /* SystemCapabilityBridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemCapabilityBridge.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2D17A4F2F8C86C455183E18F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B34E02B4D35D542475330A02 /* OLEDGuardCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0F607E4ECEE11650C5E5FD76 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9CEE0A7DF5A1F32319A77A20 /* AutomationView.swift */,
+				EF76FD447F03A4613319DC44 /* ContentView.swift */,
+				A956408EDFE4A2EFEF2B5DAE /* OnboardingView.swift */,
+				E8B5E6C5A84371B220302669 /* SettingsView.swift */,
+				DB586815B6B7912B97DEC8CC /* SharedComponents.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		146AB4AA0DC0A03B740F294D /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				04E21E84A742A920B9C7A83E /* OLEDGuardWidgetsBundle.swift */,
+			);
+			name = Sources;
+			path = OLEDGuardWidgets/Sources;
+			sourceTree = "<group>";
+		};
+		37ECCBB3D2C67043C706C4A3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E8F2C247525D86F5AAEB21C6 /* OLEDGuard.app */,
+				0DA6BD1B3BEF45C4941F470F /* OLEDGuardCore.framework */,
+				54BECE6222DD8B7BF0F5D21B /* OLEDGuardTests.xctest */,
+				723699484217E70E20366BC5 /* OLEDGuardWidgetsExtension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3E69732C204C7558E4F564C7 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				8EF1E0D1CBD472FF42C54D18 /* DisplayEngineTests.swift */,
+			);
+			name = Sources;
+			path = OLEDGuardTests/Sources;
+			sourceTree = "<group>";
+		};
+		B18F7B63260A269E689B053B /* Intents */ = {
+			isa = PBXGroup;
+			children = (
+				AA8F87554DFC5D45CE474808 /* DisplayIntents.swift */,
+			);
+			name = Intents;
+			path = Shared/Sources/Intents;
+			sourceTree = "<group>";
+		};
+		B570A66FCD86E42997DD11DB /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				685E34324C7A338F2C458440 /* AppModel.swift */,
+				4BDA146C0C1C1873865C46E7 /* OLEDGuardApp.swift */,
+				D201094B7BC697EC56A092EE /* SystemDisplayController.swift */,
+				0F607E4ECEE11650C5E5FD76 /* Views */,
+			);
+			name = Sources;
+			path = OLEDGuardApp/Sources;
+			sourceTree = "<group>";
+		};
+		D83A8154D4D777BCE8523B64 = {
+			isa = PBXGroup;
+			children = (
+				DEFEAAA41DF51752D8E98FB7 /* Core */,
+				B18F7B63260A269E689B053B /* Intents */,
+				B570A66FCD86E42997DD11DB /* Sources */,
+				3E69732C204C7558E4F564C7 /* Sources */,
+				146AB4AA0DC0A03B740F294D /* Sources */,
+				37ECCBB3D2C67043C706C4A3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DEFEAAA41DF51752D8E98FB7 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				2852F72E384B0997441F95CF /* AppState.swift */,
+				177C08DB7C39E6E0F47A969D /* DisplayEngine.swift */,
+				8A1695B9DDDA04CB876E8A9F /* DisplayMode.swift */,
+				607C816F072BF7788CFEEF05 /* SharedStore.swift */,
+				F2A683046EEE433B977DB070 /* SystemCapabilityBridge.swift */,
+			);
+			name = Core;
+			path = Shared/Sources/Core;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7CAD9E64B6B41D3D74F825F7 /* OLEDGuard */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DAAE8A9F017C020CA9ACBB80 /* Build configuration list for PBXNativeTarget "OLEDGuard" */;
+			buildPhases = (
+				39556F5180BBE6325275E6B6 /* Sources */,
+				69E275467B80F29943891B8B /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CD603F3F3FF8A1AD823AC7A5 /* PBXTargetDependency */,
+			);
+			name = OLEDGuard;
+			packageProductDependencies = (
+			);
+			productName = OLEDGuard;
+			productReference = E8F2C247525D86F5AAEB21C6 /* OLEDGuard.app */;
+			productType = "com.apple.product-type.application";
+		};
+		84E891C109D07DD9F68391FE /* OLEDGuardTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8DBCA0902EF15C83673397E6 /* Build configuration list for PBXNativeTarget "OLEDGuardTests" */;
+			buildPhases = (
+				B3D50A2DA30C23A843626588 /* Sources */,
+				2D17A4F2F8C86C455183E18F /* Frameworks */,
+				A5B2D55F558CF16A679FC4ED /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				064F46C1651D5743CCF7BBFE /* PBXTargetDependency */,
+			);
+			name = OLEDGuardTests;
+			packageProductDependencies = (
+			);
+			productName = OLEDGuardTests;
+			productReference = 54BECE6222DD8B7BF0F5D21B /* OLEDGuardTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		8E69A12162852EF8020D17FB /* OLEDGuardCore */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8265FFA91056F9B1CB63CBC3 /* Build configuration list for PBXNativeTarget "OLEDGuardCore" */;
+			buildPhases = (
+				D8721E735D763EE728D2C618 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OLEDGuardCore;
+			packageProductDependencies = (
+			);
+			productName = OLEDGuardCore;
+			productReference = 0DA6BD1B3BEF45C4941F470F /* OLEDGuardCore.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		ED4AEC801EE730FCB46FC061 /* OLEDGuardWidgetsExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 76E031212DF41E67C89090A2 /* Build configuration list for PBXNativeTarget "OLEDGuardWidgetsExtension" */;
+			buildPhases = (
+				16D383BDA9B597777F7863E4 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OLEDGuardWidgetsExtension;
+			packageProductDependencies = (
+			);
+			productName = OLEDGuardWidgetsExtension;
+			productReference = 723699484217E70E20366BC5 /* OLEDGuardWidgetsExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		543DD10C8CC2E30CAA6008F2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					7CAD9E64B6B41D3D74F825F7 = {
+						DevelopmentTeam = "";
+						ProvisioningStyle = Automatic;
+					};
+					84E891C109D07DD9F68391FE = {
+						DevelopmentTeam = "";
+						ProvisioningStyle = Automatic;
+					};
+					8E69A12162852EF8020D17FB = {
+						DevelopmentTeam = "";
+						ProvisioningStyle = Automatic;
+					};
+					ED4AEC801EE730FCB46FC061 = {
+						DevelopmentTeam = "";
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 7171FD4B5C1621B67FB50858 /* Build configuration list for PBXProject "OLEDGuard" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = D83A8154D4D777BCE8523B64;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 37ECCBB3D2C67043C706C4A3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7CAD9E64B6B41D3D74F825F7 /* OLEDGuard */,
+				8E69A12162852EF8020D17FB /* OLEDGuardCore */,
+				84E891C109D07DD9F68391FE /* OLEDGuardTests */,
+				ED4AEC801EE730FCB46FC061 /* OLEDGuardWidgetsExtension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		16D383BDA9B597777F7863E4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E46C098EF953D8E736DAE83A /* AppState.swift in Sources */,
+				FEAF11987628376F83F6B893 /* DisplayEngine.swift in Sources */,
+				C2EFEB1061DEB2E162608D36 /* DisplayIntents.swift in Sources */,
+				9ECF57221A69BE6ADCF58EFD /* DisplayMode.swift in Sources */,
+				DF8CA4E0F77C2D04DEB039A7 /* OLEDGuardWidgetsBundle.swift in Sources */,
+				B44446610AA180DCD1CC9E47 /* SharedStore.swift in Sources */,
+				5B400B4CD344E37BD5A07921 /* SystemCapabilityBridge.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		39556F5180BBE6325275E6B6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8004B744B9863B0D4099997A /* AppModel.swift in Sources */,
+				5528B3276BF09BE6CBE802DA /* AppState.swift in Sources */,
+				55E2B216550A4979EB353BC4 /* AutomationView.swift in Sources */,
+				7D6B169BAA9E03FB85284613 /* ContentView.swift in Sources */,
+				160490803A307F19B71EEFCB /* DisplayEngine.swift in Sources */,
+				DE6441F9CC0A63974B1942D2 /* DisplayIntents.swift in Sources */,
+				B3CBE76825FBDABFD609FBF2 /* DisplayMode.swift in Sources */,
+				D86ADE755F8A33A9CDEEC30F /* OLEDGuardApp.swift in Sources */,
+				D5F0EC756ABA4996AB62B8FA /* OnboardingView.swift in Sources */,
+				C7B2A0AB544C6110BA698DA8 /* SettingsView.swift in Sources */,
+				68E018EAE5B25A14CDD3E563 /* SharedComponents.swift in Sources */,
+				4CB6AF807B8943004EE38830 /* SharedStore.swift in Sources */,
+				89F6604F9A8EBC6DD7B9B8D8 /* SystemCapabilityBridge.swift in Sources */,
+				707250F138D52A3F64F6F95E /* SystemDisplayController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B3D50A2DA30C23A843626588 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D89670CDD830BA9F5973F251 /* DisplayEngineTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D8721E735D763EE728D2C618 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				35D47D292D0574FCA741F0D4 /* AppState.swift in Sources */,
+				3326F090EA660EB068EDA031 /* DisplayEngine.swift in Sources */,
+				D691C55A15073754C2EFCBE9 /* DisplayMode.swift in Sources */,
+				5F5784082C05A72E0D6AB3CB /* SharedStore.swift in Sources */,
+				14098F3E9A41B69F25B3B203 /* SystemCapabilityBridge.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		064F46C1651D5743CCF7BBFE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8E69A12162852EF8020D17FB /* OLEDGuardCore */;
+			targetProxy = 9A1D7342D885468EFAE496D3 /* PBXContainerItemProxy */;
+		};
+		CD603F3F3FF8A1AD823AC7A5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ED4AEC801EE730FCB46FC061 /* OLEDGuardWidgetsExtension */;
+			targetProxy = 4955D9711E6A6B2F2A3B59B8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		39F6A60F8F2B2A13E1A24E23 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GENERATE_INFOPLIST_FILE = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.OLEDGuard.core;
+				PRODUCT_NAME = OLEDGuardCore;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		89C2DEF1501D25B871734860 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_ENTITLEMENTS = OLEDGuardWidgets/Resources/OLEDGuardWidgets.entitlements;
+				INFOPLIST_FILE = OLEDGuardWidgets/Resources/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.OLEDGuard.widgets;
+				PRODUCT_NAME = OLEDGuardWidgets;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		92971E86514DE0A007B676B0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = OLEDGuardApp/Resources/OLEDGuard.entitlements;
+				INFOPLIST_FILE = OLEDGuardApp/Resources/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.OLEDGuard;
+				PRODUCT_NAME = OLEDGuard;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		93F4E2F4BC12FA6842015327 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_ENTITLEMENTS = OLEDGuardWidgets/Resources/OLEDGuardWidgets.entitlements;
+				INFOPLIST_FILE = OLEDGuardWidgets/Resources/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.OLEDGuard.widgets;
+				PRODUCT_NAME = OLEDGuardWidgets;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		A94F4E6151E8D0C7FE5519C7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_TESTABILITY = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0.0;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.1;
+			};
+			name = Release;
+		};
+		B2D6DB375ADD34A55EB1C93C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GENERATE_INFOPLIST_FILE = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.OLEDGuard.tests;
+				PRODUCT_NAME = OLEDGuardTests;
+			};
+			name = Release;
+		};
+		C35A2DD84FADC108A721CDF4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = OLEDGuardApp/Resources/OLEDGuard.entitlements;
+				INFOPLIST_FILE = OLEDGuardApp/Resources/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.OLEDGuard;
+				PRODUCT_NAME = OLEDGuard;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		CFEB9A386E15C376DC1465FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GENERATE_INFOPLIST_FILE = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.OLEDGuard.tests;
+				PRODUCT_NAME = OLEDGuardTests;
+			};
+			name = Debug;
+		};
+		DFFF46CC63DBD4687CFDDF81 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GENERATE_INFOPLIST_FILE = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.OLEDGuard.core;
+				PRODUCT_NAME = OLEDGuardCore;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		FF74780B7BECD89578737748 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_TESTABILITY = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0.0;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.1;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7171FD4B5C1621B67FB50858 /* Build configuration list for PBXProject "OLEDGuard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FF74780B7BECD89578737748 /* Debug */,
+				A94F4E6151E8D0C7FE5519C7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		76E031212DF41E67C89090A2 /* Build configuration list for PBXNativeTarget "OLEDGuardWidgetsExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				89C2DEF1501D25B871734860 /* Debug */,
+				93F4E2F4BC12FA6842015327 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		8265FFA91056F9B1CB63CBC3 /* Build configuration list for PBXNativeTarget "OLEDGuardCore" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DFFF46CC63DBD4687CFDDF81 /* Debug */,
+				39F6A60F8F2B2A13E1A24E23 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		8DBCA0902EF15C83673397E6 /* Build configuration list for PBXNativeTarget "OLEDGuardTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CFEB9A386E15C376DC1465FC /* Debug */,
+				B2D6DB375ADD34A55EB1C93C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		DAAE8A9F017C020CA9ACBB80 /* Build configuration list for PBXNativeTarget "OLEDGuard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C35A2DD84FADC108A721CDF4 /* Debug */,
+				92971E86514DE0A007B676B0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 543DD10C8CC2E30CAA6008F2 /* Project object */;
+}
