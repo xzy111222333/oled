@@ -388,7 +388,7 @@ struct AppState: Codable, Sendable {
         lastComputation: .neutral,
         automationRules: AutomationStarterPack.balanced.rules(),
         isProtectionEnabled: true,
-        hasCompletedOnboarding: false,
+        hasCompletedOnboarding: true,
         baselineBrightness: nil,
         todayUsageMinutes: 0,
         fatigueUsageMinutes: 0,
