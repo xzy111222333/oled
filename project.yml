@@ -1,0 +1,69 @@
+name: OLEDGuard
+options:
+  minimumXcodeGenVersion: 2.39.0
+  deploymentTarget:
+    iOS: "17.0"
+settings:
+  base:
+    SWIFT_VERSION: 5.10
+    CURRENT_PROJECT_VERSION: 1
+    MARKETING_VERSION: 1.0.0
+    DEVELOPMENT_TEAM: ""
+    CODE_SIGN_STYLE: Automatic
+    GENERATE_INFOPLIST_FILE: NO
+targets:
+  OLEDGuard:
+    type: application
+    platform: iOS
+    sources:
+      - path: OLEDGuardApp/Sources
+      - path: Shared/Sources/Core
+      - path: Shared/Sources/Intents
+    resources:
+      - path: OLEDGuardApp/Resources/Assets.xcassets
+    info:
+      path: OLEDGuardApp/Resources/Info.plist
+    entitlements:
+      path: OLEDGuardApp/Resources/OLEDGuard.entitlements
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.example.OLEDGuard
+        PRODUCT_NAME: OLEDGuard
+        TARGETED_DEVICE_FAMILY: "1"
+        INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents: YES
+    dependencies:
+      - target: OLEDGuardWidgetsExtension
+        embed: true
+
+  OLEDGuardWidgetsExtension:
+    type: app-extension
+    platform: iOS
+    sources:
+      - path: OLEDGuardWidgets/Sources
+      - path: Shared/Sources/Core
+      - path: Shared/Sources/Intents
+    resources:
+      - path: OLEDGuardWidgets/Resources/Assets.xcassets
+    info:
+      path: OLEDGuardWidgets/Resources/Info.plist
+    entitlements:
+      path: OLEDGuardWidgets/Resources/OLEDGuardWidgets.entitlements
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.example.OLEDGuard.widgets
+        PRODUCT_NAME: OLEDGuardWidgets
+        SKIP_INSTALL: YES
+        APPLICATION_EXTENSION_API_ONLY: YES
+
+  OLEDGuardTests:
+    type: bundle.unit-test
+    platform: iOS
+    hostApplication: OLEDGuard
+    sources:
+      - path: OLEDGuardTests/Sources
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.example.OLEDGuard.tests
+        PRODUCT_NAME: OLEDGuardTests
+    dependencies:
+      - target: OLEDGuard
